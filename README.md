@@ -8,6 +8,7 @@ Render sample:
 Intro:
 <br/>
 Interactive screen tracks and displays all attempted hits, hits that have landed and remaining ships on the grid. The game ends when all ships are destroyed or user terminates the app.
+<br/>
 Grid size, amount of ships and ship types are costumizable via settings.json file.
 
 Manual:
