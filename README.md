@@ -3,6 +3,7 @@ Interactive battleships game completely rendered on a console application window
 
 Render sample:
 <br/>
+<br/>
 <img width="286" alt="sample" src="https://github.com/user-attachments/assets/6211f04f-8e02-485f-978c-936f4a5e2a1b" />
 
 Intro:
