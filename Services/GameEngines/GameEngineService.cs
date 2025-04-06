@@ -32,10 +32,8 @@ namespace Battleships.Services.GameEngines
                     return new Event { ActionType = ActionType.Hit, TargetName = targetName };
                 }
             }
-            else
-            {
-                return new Event { ActionType = ActionType.Miss };
-            }
+            
+            return new Event { ActionType = ActionType.Miss };
         }
 
         public bool IsGridValid { get; private set; }
