@@ -26,12 +26,20 @@ namespace Battleships
 
             // Game Start
             feedbackInterface.SendFeedback(new Event { ActionType = ActionType.GameStart });
-
+            Event? actionEvent = null;
+            
             while (gameEngine.IsGameLive)
             {
                 feedbackInterface.PrintMap(gameEngine.Grid);
+                
+                if (actionEvent != null)
+                {
+                    feedbackInterface.SendFeedback(actionEvent);
+                }
+
                 feedbackInterface.SendFeedback(new Event { ActionType = ActionType.PlayerTurn });
-                feedbackInterface.SendFeedback(gameEngine.ReadCoordInput(Console.ReadLine()?.ToUpper()));
+
+                actionEvent = gameEngine.ReadCoordInput(Console.ReadLine()?.ToUpper());
             }
 
             // Game End

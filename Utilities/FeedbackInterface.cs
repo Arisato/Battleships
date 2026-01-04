@@ -50,6 +50,8 @@ namespace Battleships.Utilities
 
         public void PrintMap(Grid grid)
         {
+            Clear();
+
             var craftLabels = grid.WaterCrafts.GroupBy(c => c.Key.Name);
 
             for (int y = 0; y <= grid.GridSizeY; y++)
